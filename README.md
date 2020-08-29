@@ -23,37 +23,23 @@ In this assignment you will build and evaluate several machine learning models t
 
 #### Resampling
 
-Use the [imbalanced learn](https://imbalanced-learn.readthedocs.io) library to resample the LendingClub data and build and evaluate logistic regression classifiers using the resampled data.
-
-You need to:
-
-1. Oversample the data using the `Naive Random Oversampler` and `SMOTE` algorithms.
-
-2. Undersample the data using the `Cluster Centroids` algorithm.
-
-3. Over- and undersample using a combination `SMOTEENN` algorithm.
-
-
-Use the above to answer the following questions:
-
 * Which model had the best balanced accuracy score?
->   
+    - Of all the models, Naive Random Oversampling and SMOTE Oversampling have the best accuracy score (0.9936781215845847)
+ 
 * Which model had the best recall score?
+    - Of all the models, Naive Random Oversampling, SMOTE Oversampling and SMOTEENN have the best recall score (0.99) for all the classification (High_Risk, Low_Risk and Combined Avg).
 >
 * Which model had the best geometric mean score?
+    - Except Simple Logistic Regression, All the models have the best geo score (0.99) for all the classification (High_Risk, Low_Risk and Combined Avg).
 
 #### Ensemble Learning
-
-In this section, you will train and compare two different ensemble classifiers to predict loan risk and evaluate each model. You will use the `balanced random forest classifier` and the `easy ensemble AdaBoost classifier`.
-
-Use the above to answer the following questions:
 
 * Which model had the best balanced accuracy score?
     - Between Balanced Random Forest Classifier and an Easy Ensemble AdaBoost classifier mode, Easy Ensemble AdaBoost Classifier has a better balanced accuracy score (0.9931452145768576). But, the difference is not much and it is too close. 
    - Balanced Random Forest Classifier = 0.9927988250218349 Vs Easy Ensemble AdaBoost Classifier = 0.9931452145768576
 
 * Which model had the best recall score?
-    - Both models have the same recall score for all of the parameters (High_Risk, Low_Risk and Avg)
+    - Both models have the same recall score for all of the parameters (High_Risk, Low_Risk and Combined Avg)
     - Balanced Random Forest Classifier 
         - High_Risk_Recall = 0.99
         - Low_Risk_Recall  = 0.99
@@ -65,7 +51,7 @@ Use the above to answer the following questions:
         - Avg_Recall       = 0.99
 
 * Which model had the best geometric mean score?
-    - Both models have the same geo score for all of the parameters (High_Risk, Low_Risk and Avg)
+    - Both models have the same geo score for all of the parameters (High_Risk, Low_Risk and Combined Avg)
     - Balanced Random Forest Classifier 
         - High_Risk_Geo   = 0.99
         - Low_Risk_Geo    = 0.99
